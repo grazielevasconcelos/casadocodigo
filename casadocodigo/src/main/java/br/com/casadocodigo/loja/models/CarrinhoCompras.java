@@ -53,7 +53,6 @@ public class CarrinhoCompras implements Serializable{
 		return total;
 	}
 
-
 	public void remover(Integer produtoId, TipoPreco tipoPreco) {
 		Produto produto = new Produto();
 		produto.setId(produtoId);
@@ -61,5 +60,9 @@ public class CarrinhoCompras implements Serializable{
 		itens.remove(new CarrinhoItem(produto, tipoPreco));
 		
 	}
+	
+    public void limpaCarrinho(){
+        itens.clear();
+    }
 	
 }
